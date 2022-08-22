@@ -1,0 +1,8 @@
+#============= untrusted_app_30 ==============
+allow untrusted_app_30 input_device:chr_file getattr;
+allow untrusted_app_30 sysfs_net:dir search;
+allow untrusted_app_30 app_data_file:file execute;
+get_prop(untrusted_app_30, oem_unlock_prop)
+allow untrusted_app_30 untrusted_app_30:netlink_route_socket bind;
+allow untrusted_app_30 window_service:service_manager find;
+allow untrusted_app_30 zygote:unix_stream_socket getopt;
