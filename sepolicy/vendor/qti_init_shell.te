@@ -11,3 +11,4 @@ allow qti_init_shell proc_page_cluster:file { open write };
 # Postboot
 allow qti_init_shell sysfs:file { write setattr };
 allow qti_init_shell qti_init_shell:capability linux_immutable;
+allow qti_init_shell proc_watermark_scale_factor:file { open write };
